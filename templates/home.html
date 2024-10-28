@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+<div class="container">
+    <div class="card card-body"
+        style="border: 2px solid #007bff; box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); border-radius: 25px; background: rgba(255, 255, 255, 0.9); color: #333; direction: rtl; text-align: right;;">
+        <h2 style="font-size: 30px; text-align: center; font-family: 'Arial', sans-serif;"> تطبيق ويب طبي يعتمد على
+            التعلم الآلي والتعلم العميق.</h2>
+        <p style="font-size: 20px; font-family: 'Arial', sans-serif;">تم تدريب هذه النماذج الخاصة بالتعلم الآلي والتعلم
+            العميق على مجموعات بيانات كبيرة وآلاف الصور.</p>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-12 card card-body"
+                style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); margin: 5px; background: 0;">
+                <h4 style="font-size: 26px; color: #007bff; font-family: 'Arial', sans-serif;">الملاريا</h4>
+                <p style="font-size: 20px; font-family: 'Arial', sans-serif;">الملاريا هي مرض معدي ينقله البعوض يصيب
+                    البشر والحيوانات الأخرى. تتسبب الملاريا في ظهور أعراض تشمل عادةً الحمى، التعب، القيء، والصداع. في
+                    الحالات الشديدة، يمكن أن تتسبب في اصفرار الجلد، النوبات، الغيبوبة، أو الوفاة. تبدأ الأعراض عادةً بعد
+                    عشرة إلى خمسة عشر يومًا من لدغة البعوض المصاب. إذا لم يتم علاجها بشكل صحيح، قد يعاني الأشخاص من
+                    تكرار المرض بعد عدة أشهر.</p>
+                <h5 style="font-size: 22px; font-family: 'Arial', sans-serif;">الأعراض</h5>
+                <ul style="font-size: 20px; font-family: 'Arial', sans-serif;">
+                    <li>الحمى. هذه هي الأعراض الأكثر شيوعًا.</li>
+                    <li>القشعريرة</li>
+                    <li>الصداع</li>
+                    <li>الغثيان والقيء</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-md-12 card card-body"
+                style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); margin: 5px; background: 0;">
+                <h4 style="font-size: 26px; color: #007bff; font-family: 'Arial', sans-serif;">الالتهاب الرئوي</h4>
+                <p style="font-size: 20px; font-family: 'Arial', sans-serif;">الالتهاب الرئوي هو عدوى تسبب التهاب
+                    الأكياس الهوائية في إحدى الرئتين أو كليهما. قد تمتلئ الأكياس الهوائية بالسوائل أو القيح (المادة
+                    الصديدية)، مما يسبب السعال المصحوب بالبلغم أو القيح، الحمى، القشعريرة، وصعوبة في التنفس. يمكن أن
+                    تسببة مجموعة متنوعة من الكائنات الحية، بما في ذلك البكتيريا، الفيروسات والفطريات. </p>
+                <h5 style="font-size: 22px; font-family: 'Arial', sans-serif;">الأعراض</h5>
+                <ul style="font-size: 20px; font-family: 'Arial', sans-serif;">
+                    <li>السعال، والذي قد ينتج مخاطًا أخضر، أصفر أو حتى دمويًا.</li>
+                    <li>الحمى، التعرق والقشعريرة المتواصلة.</li>
+                    <li>ضيق في التنفس.</li>
+                    <li>تنفس سريع وسطحي.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

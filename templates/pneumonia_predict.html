@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="row" style="margin-bottom: 477px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        {% if pred == 1 %}
+        <div class="card card-body alert alert-danger"
+            style="border: 2px solid #dc3545; border-radius: 25px; background: rgba(255, 99, 71, 0.1); color: #dc3545;">
+            <center style="font-size: 28px; font-weight: bold;">هذه الرئة مصابة بالتهاب رئوي، يرجى
+                استشارة الطبيب.</center>
+            <center>
+                <h5>توصيات:</h5>
+                <ol style="text-align: right; margin-top: 10px; font-size: 18px; color: #333;">
+                    <li>استشارة الطبيب لتحديد نوع العلاج المناسب بناءً على الحالة الصحية.</li>
+                    <li>تناول الأدوية الموصوفة، مثل المضادات الحيوية إذا كانت العدوى بكتيرية.</li>
+                    <li>أخذ قسط كافٍ من الراحة لتقوية الجهاز المناعي.</li>
+                    <li>تناول كميات كافية من السوائل للمساعدة في ترطيب الجسم وتسهيل التنفس.</li>
+                    <li>متابعة الأعراض مثل السعال والحمى، والعودة إلى الطبيب إذا تفاقمت الحالة.</li>
+                    <li>الابتعاد عن التدخين أو التعرض للدخان لتقليل تهيج الرئتين.</li>
+                    <li>استشارة الطبيب حول اللقاحات اللازمة مثل لقاح الإنفلونزا ولقاح الالتهاب الرئوي.</li>
+                </ol>
+            </center>
+        </div>
+        {% else %}
+        <div style="color: rgb(0, 0, 0);" class="card card-body alert alert-success"
+            style="border: 2px solid #28a745; border-radius: 25px; background: rgba(72, 191, 85, 0.1);">
+            <center style="font-size: 28px; font-weight: bold;">هذه الرئة غير مصابة بالتهاب.</center>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4"><a href="{{ url_for('pneumoniaPage') }}" class="btn btn-block btn-primary">الرجوع</a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="row" style="margin-bottom: 477px;">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        {% if pred == 1 %}
+        <div class="card card-body alert alert-danger" dir="rtl"
+            style="border-radius: 25px; border: 2px solid rgba(255, 0, 0, 0.5); background: rgba(255, 99, 71, 0.1);">
+            <center>
+                <p style="font-size: 24px; font-weight: bold; color: red;">هذه الخلية هي خلية ملاريا مصابة.</p>
+            </center>
+            <center>
+                <p style="font-size: 20px; font-weight: bold; color: black;">توصيات:</p>
+            </center>
+            <center>
+                <ol style="text-align: right; margin-top: 10px; font-size: 18px; color: black;">
+                    <li>استشارة الطبيب ضرورية لتحديد نوع العلاج المناسب بناءً على نوع الطفيلي وحالة المريض.</li>
+                    <li>الالتزام بالعلاج الموصوف، مثل الأرتيميسينين أو الكلوروكين حسب توجيهات الطبيب.</li>
+                    <li>الراحة التامة وتقليل الأنشطة المجهدة لتقوية جهاز المناعة.</li>
+                    <li>شرب السوائل لتعويض السوائل ومنع الجفاف.</li>
+                    <li>متابعة الحرارة والتأكد من استقرار الأعراض، وفي حال تفاقمها يجب العودة للطبيب.</li>
+                    <li>تجنب البعوض باستخدام الناموسيات والمبيدات الحشرية لمنع انتقال العدوى للآخرين.</li>
+                </ol>
+            </center>
+        </div>
+        {% else %}
+        <div class="card card-body alert alert-success" dir="rtl"
+            style="border-radius: 25px; background: rgba(72, 191, 85, 0.1);">
+            <center>
+                <p style="font-size: 24px; font-weight: bold;">هذه الخلية ليست مصابة.</p>
+            </center>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <a href="{{ url_for('malariaPage') }}" class="btn btn-block btn-primary">الرجوع</a>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{% endblock %}
